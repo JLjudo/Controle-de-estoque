@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Gestão de vendas </title>
+</head>
+<body>
+    <header><h2> Controle de estoque </h2></header>
+    <script>
+
+        // Criação de função para calcular os produtos no estoque
+        function sub(){
+
+            // Criação de um objeto com a quantidade incial de produtos:
+            const inicial = {Celular: 150, Fone: 55, Pendrive: 37, CaixaSom: 28, Tablet: 32, Carregador: 29}
+            console.log("Quantidade inicial de produtos: "); // Exibindo o objeto
+            console.log(inicial);                            //
+            
+            // Criação de um objeto com a quantidade de produtos vendidos:
+            const vendidos = {Celular: 38, Fone: 10, Pendrive: 17, CaixaSom: 8, Tablet: 5, Carregador: 15}
+            console.log("Produtos vendidos: "); // Exibindo o objeto
+            console.log(vendidos);              //
+
+            // Criação de um objeto para armazenar os valores dos calculos
+            const restam = {Celular: 0, Fone: 0, Pendrive: 0, CaixaSom: 0, Tablet: 0, Carregador: 0}
+
+            // Utilizando o ForIn para percorrer os objetos
+            for(let i in inicial){
+                restam[i] = inicial[i] - vendidos[i]; // Subtração dos valores
+            }
+            
+            console.log("Produtos no estoque:"); // Exibindo o objeto com a quantidade restante de produtos
+            console.log(restam);                 //
+        }
+
+        sub(); // Chamando a função para ser executada
+
+    </script>
+</body>
+</html>
